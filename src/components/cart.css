@@ -1,0 +1,42 @@
+.cart-container {
+  width: 100%;
+  padding: 20px;
+  font-family: 'Inter', sans-serif;
+}
+
+.cart-container h1 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+/* Layout for left products and right summary */
+.cart-layout {
+  display: grid;
+  grid-template-columns: 1fr; /* mobile: single column */
+  gap: 24px;
+}
+
+/* Desktop view */
+@media (min-width: 1024px) {
+  .cart-layout {
+    grid-template-columns: 2fr 1fr; /* left products wider, right summary narrower */
+    align-items: start;
+  }
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.right {
+  position: relative;
+}
+
+/* Make order summary sticky */
+.right .summary-container {
+  position: sticky;
+  top: 20px;
+}
